@@ -1,0 +1,271 @@
+    /* =========================
+    RESET & GLOBAL (Mobile First)
+    ========================= */
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    }
+
+    body {
+    background: #e0e0e0;
+    max-width: 100vw;
+    overflow-x: hidden;
+    }
+
+
+    /* =========================
+    NAVBAR (แถบด้านบน)
+    ========================= */
+    .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+
+    background: #bdbdbd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    /* ปุ่มย้อนกลับ */
+    .nav-left {
+    width: 36px;
+    font-size: 20px;
+    cursor: pointer;
+    }
+
+    /* เมนูหมวดหมู่ */
+    .nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    }
+
+    .nav-center a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background .2s;
+    }
+
+    .nav-center a:hover {
+    background: #9e9e9e;
+    }
+
+    .nav-center a.active {
+    background: #757575;
+    color: #fff;
+    }
+
+    /* ไอคอนตะกร้า */
+    .nav-right {
+    font-size: 18px;
+    cursor: pointer;
+    }
+
+
+    /* =========================
+    MAIN LAYOUT (มือถือ)
+    ========================= */
+    .container {
+    width: 100%;
+    max-width: 480px;     /* มือถือใหญ่สุด */
+    margin: 0 auto;
+    padding: 12px;
+    }
+
+    h2 {
+    margin: 16px 0 12px;
+    color: #333;
+    font-size: 18px;
+    }
+
+
+    /* =========================
+    FOOD GRID
+    ========================= */
+    .food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    }
+
+    /* มือถือเล็กมาก (เช่น iPhone SE) */
+    @media (max-width: 360px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+    }
+
+
+    /* =========================
+    FOOD CARD
+    ========================= */
+    .food-card {
+    position: relative;
+    text-align: center;
+
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform .2s, box-shadow .2s;
+    }
+
+    .food-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    /* รูปอาหาร (แนวตั้ง) */
+    .food-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    }
+
+    /* ชื่ออาหาร */
+    .food-card h3 {
+    font-size: 15px;
+    line-height: 1.3;
+    margin: 8px 0 4px;
+    }
+
+    /* ราคา */
+    .price {
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 6px;
+    }
+
+    /* ปุ่มสั่งซื้อ */
+    .order-btn {
+    width: 100%;
+    padding: 10px 0;
+
+    background: #2e7d32;
+    color: #fff;
+    font-size: 15px;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    }
+
+    .order-btn:active {
+    transform: scale(0.96);
+    }
+
+
+    /* =========================
+    BADGE (ยอดฮิต)
+    ========================= */
+    .badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    background: #d32f2f;
+    color: #fff;
+    font-size: 12px;
+
+    padding: 4px 8px;
+    border-radius: 6px;
+    }
+
+
+    /* =========================
+    POPUP
+    ========================= */
+    .popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+
+    display: none;
+
+    background: #2e7d32;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    }
+
+
+    /* =========================
+    CART PANEL
+    ========================= */
+    .cart-panel {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 998;
+
+    width: 85vw;
+    max-width: 320px;
+    height: calc(100% - 60px);
+
+    background: #fff;
+    padding: 15px;
+
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    display: none;
+    }
+
+    .cart-panel h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    }
+
+    /* รายการสินค้า */
+    .cart-item {
+    font-size: 14px;
+    margin-bottom: 8px;
+    }
+
+    /* ยอดรวม */
+    .cart-total {
+    margin-top: 10px;
+    font-weight: bold;
+    }
+
+    /* ปุ่มจ่ายเงิน */
+    .pay-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+
+    background: #2e7d32;
+    color: #fff;
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    }
+
+
+    /* =========================
+    SMALL SCREEN NAV FIX
+    ========================= */
+    @media (max-width: 400px) {
+    .nav-center {
+        gap: 6px;
+    }
+
+    .nav-center a {
+        font-size: 13px;
+        padding: 5px 6px;
+    }
+    }

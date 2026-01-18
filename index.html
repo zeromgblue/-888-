@@ -1,0 +1,122 @@
+    <!DOCTYPE html>
+    <html lang="th">
+    <head>
+    <meta charset="UTF-8">
+    <title>ขายเทพ 888</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" href="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/614974125_1256208749734056_2116318174697945651_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=4J9lZ44X-wEQ7kNvwFYdcww&_nc_oc=AdkeCS85ewTNpCmt00qrYQIV69LQvu1_H1BeuMAYitrEzb_LDOxZkh-YttKppX2Ok3PYh46tAhypec8QSr7LaFBR&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QHQNCBj02_r9OLmG7tH36EBk_jHWWcJfGF46qTPDd38QQ&oe=69942349">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+    <div class="nav-left" onclick="goBack()">↩</div>
+
+    <nav class="nav-center">
+        <a href="index.html" class="active">หน้าหลัก</a>
+        <a href="drink.html">น้ำ</a>
+        <a href="snack.html">ขนม</a>
+        <a href="rice.html">ข้าว</a>
+        <a href="dessert.html">ของหวาน</a>
+    </nav>
+
+    <div class="nav-right" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+    </div>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="container">
+
+    <h2>🔥 อาหารยอดฮิต</h2>
+    <div class="food-grid">
+
+        <div class="food-card">
+        <span class="badge">ยอดฮิต</span>
+        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/615302851_4437069946527946_760773755476789096_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ZqHS9kYU5UQQ7kNvwFexPT3&_nc_oc=AdngsjQXqm-mDWa-LAEBpfSKR9E3R-wAAar_VDpMkUVZAlfjiFaA_KX0VRbknq2wgXHJQxq2ZlUChpRpenfaXFlT&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QFMZ3-4965zOJBq25g36axM6-c5Q1QTW9PUZJzOz3jyig&oe=699412A6">
+        <h3>เต้ขนมปัง สอดใส้นมสด</h3>
+        <p class="price">999 บาท</p>
+        <button class="order-btn" onclick="addToCart('เต้ขนมปัง สอดใส้นมสด', 999)">
+            สั่งซื้อ
+        </button>
+        </div>
+
+        <div class="food-card">
+        <span class="badge">ยอดฮิต</span>
+        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/613973941_1786256185369863_803101110563069870_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=NasJ4oRto8gQ7kNvwF98WBO&_nc_oc=Adk4ZnDH3nQ0hB_hoZrMWFEyz381ITqkxLk1zOiFULkt41zAdopjTeb8EVrkVwClzlOayaAh6LQzFUvVkEJERvb9&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QH5o7CeBfRi_MbmekzcA1U4eRj8f4ZxW8uRQPQXxqGFIg&oe=69940A3F">
+        <h3>ผัดอานาย สุดแซ่บ</h3>
+        <p class="price">300 บาท</p>
+        <button class="order-btn" onclick="addToCart('ผัดอานาย สุดแซ่บ', 300)">
+            สั่งซื้อ
+        </button>
+        </div>
+
+        <div class="food-card">
+        <span class="badge">ยอดฮิต</span> 
+        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/613917676_1638729614159800_2067727938813081317_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=rfNIrjOhfE8Q7kNvwEFyLCD&_nc_oc=AdkCMl21Pr4iRcXlp4CUf7alf-mB4Kv275YbKUtZ-ugLoblENuh4iIUMQvUhbFJ3v8h8quGfHJHpVnmvXVjjrHWb&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QG8e6zAnf-ntLSkEiS5Igtwt5BfsGcRm3QXZ-r6s2ZYhg&oe=69941386">
+        <h3>เตเต้ตดแตก</h3>
+        <p class="price">888888 บาท</p>
+        <button class="order-btn" onclick="addToCart('เตเต้ตดแตก', 888888)">
+            สั่งซื้อ
+        </button>
+        </div>
+        
+
+    </div>
+
+    <h2>🍽️ เมนูทั้งหมด</h2>
+    <div class="food-grid">
+
+        <div class="food-card">
+        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/612855051_847408891453267_4519009087879504492_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=iWQ1nz0ak1oQ7kNvwG5VrHO&_nc_oc=AdkgwMiBAvWmg1WhuHXJVskiVYVUADEdYMpUyhj4-B31SMzNhn71w0hF-xicQrMwlGCORqrBHRV8cacGG9vhYkKy&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QGZJ0_a_wVJdSxv9euKdlb8ddYrY-Do5CkMVHnW8RwgOA&oe=6994081F">
+        <h3>ข้าวผัด สุดหล่อ</h3>
+        <p class="price">1500 บาท</p>
+        <button class="order-btn" onclick="addToCart('ข้าวผัด สุดหล่อ', 1500)">
+            สั่งซื้อ
+        </button>
+        </div>
+
+        <div class="food-card">
+        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/613122079_871108725901252_9142304027601943777_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Q3cbDgkjMQgQ7kNvwEzaRF0&_nc_oc=Adl0hYbpAh3iQnxtH9uYZdvR2jbFvn7a__TMFyodZHFN1arCGhaX4ZWtb5yRrrCjyJ-Mar1xxXOYg4oj36QrZXGl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QE61qgj1K-enZImDRM9SRgmNBYnZ2E5ZmYMjv95Zm-dhw&oe=6994273E">
+        <h3>เตเต้ขี้แตก</h3>
+        <p class="price">250 บาท</p>
+        <button class="order-btn" onclick="addToCart('เตเต้ขี้แตก', 250)">
+            สั่งซื้อ
+        </button>
+        </div>
+
+        <div class="food-card">
+        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/612280106_1194103239497758_6620384147416068876_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=s1ERSlhfO18Q7kNvwG7xQyH&_nc_oc=Adk35zUTscvciz2Ww9J1C4gW2uJ0w0Na0q1qkcQ2vSdK6uoaueQBXCywoqUA9f1dxRBoXhBxtBzJ37J73rZwz8B4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QGlFnemBOX3_y7GfHecRz5NjU3d-LntoSjICoTx-7336w&oe=69942E5D">
+        <h3>เตเต้ลืมขี้</h3>
+        <p class="price">9999 บาท</p>
+        <button class="order-btn" onclick="addToCart('เตเต้ลืมขี้', 9999)">
+            สั่งซื้อ
+        </button>
+        </div>
+
+    </div>
+
+    </main>
+
+    <!-- ===== POPUP ===== -->
+    <div class="popup" id="popup">สั่งซื้อแล้ว</div>
+
+    <!-- ===== CART ===== -->
+    <div class="cart-panel" id="cart">
+    <h3>🛒 ตะกร้าของคุณ</h3>
+    <div id="cart-items"></div>
+    <div class="cart-total" id="cart-total">รวม: 0 บาท</div>
+    <button class="pay-btn" onclick="pay()">จ่ายเงิน</button>
+    </div>
+
+    <!-- ===== SOUND ===== -->
+    <audio id="add-sound" src="sounds/heyy.mp3"></audio>
+    <audio id="pay-sound" src="sounds/caimangto.mp3"></audio>
+    <script src="app.js"></script>
+    <div class="news">
+        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/616656596_4359860514283472_7387014865950172855_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=WUoiNbbzJMEQ7kNvwH1kACv&_nc_oc=AdksR26j2IL9GCo1V0WbUfVsg-tU24LVSNxTQx_hsGBq4dHRM-BN81he0N0UbrYtZ2EcyXVDub2x7ivT9rJ5y7bu&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QH0f5e4Fjrddx3WcWeI9ZH6QCs3rPhQBbeJlBm8JLxGFQ&oe=69943C92">
+    </div>
+    </body>
+    </html>
