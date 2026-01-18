@@ -1,0 +1,77 @@
+        <!DOCTYPE html>
+        <html lang="th">
+        <head>
+        <meta charset="UTF-8">
+        <title>ขายเทพ 888 : หมวดหมู่ขนม</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+         <link rel="website icon" href="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/614974125_1256208749734056_2116318174697945651_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=4J9lZ44X-wEQ7kNvwFYdcww&_nc_oc=AdkeCS85ewTNpCmt00qrYQIV69LQvu1_H1BeuMAYitrEzb_LDOxZkh-YttKppX2Ok3PYh46tAhypec8QSr7LaFBR&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QHQNCBj02_r9OLmG7tH36EBk_jHWWcJfGF46qTPDd38QQ&oe=69942349">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+        </head>
+        <body>
+
+        <!-- ===== NAVBAR ===== -->
+        <header class="navbar">
+        <div class="nav-left" onclick="goBack()">↩</div>
+
+        <nav class="nav-center">
+            <a href="index.html">หน้าหลัก</a>
+            <a href="drink.html">น้ำ</a>
+            <a href="snack.html" class="active">ขนม</a>
+            <a href="rice.html">ข้าว</a>
+            <a href="dessert.html">ของหวาน</a>
+        </nav>
+
+        <div class="nav-right" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+        </header>
+
+        <!-- ===== MAIN ===== -->
+        <main class="container">
+        <h2>หมวดหมู่: ขนม</h2>
+
+        <div class="food-grid">
+
+            <div class="food-card">
+            <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/613584431_25355856004107409_4632801374516358166_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=nP43noju2xkQ7kNvwEHRgRm&_nc_oc=Adk1mqZvsNyfaWOJQZPRyeD0razGtfyi5y8RhHyUsV_j0UlPd-L1n3fLKfT2kwTNHIHts7YUsyW7WGTlR7pagw1h&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QFuMpAmN-D0_fdprtXCJgshXUA_9hI4mGrydvAwxZpgoA&oe=699430AD" alt="ขนม">
+            <h3>ขนมน้ำแข็ง ตรา M or New🔥</h3>
+            <p class="price">20 บาท</p>
+            <button class="order-btn" onclick="addToCart('ขนมน้ำแข็ง ตรา M or New🔥', 20)">
+                สั่งซื้อ
+            </button>
+            </div>
+
+            <div class="food-card">
+            <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/617307301_4112311842414772_8893284586796995168_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zysnPpkHhIQQ7kNvwHVkV0n&_nc_oc=Adml64rvRs6bRysxouD7Dx5ZCrBGqiujBdy51xZ8JIZmEKdzjudS3X70-IlOo6_JsVW4YTLqZQxQ28OAphZyyuSX&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QFGpCr1qdYCuuKmpC9bYzMMmuVLQSCsrT0C1oT6WQplCQ&oe=699408F3" alt="ขนม">
+            <h3>ลูกอม ตรา M or New🔥</h3>
+            <p class="price">15 บาท</p>
+            <button class="order-btn" onclick="addToCart('ลูกอม', 15)">
+                สั่งซื้อ
+            </button>
+            </div>
+
+        </div>
+        </main>
+
+        <!-- ===== POPUP ===== -->
+        <div class="popup" id="popup">สั่งซื้อแล้ว</div>
+
+        <!-- ===== CART PANEL ===== -->
+        <div class="cart-panel" id="cart">
+        <h3>🛒 ตะกร้าของคุณ</h3>
+        <div id="cart-items"></div>
+        <div class="cart-total" id="cart-total">รวม: 0 บาท</div>
+        <button class="pay-btn" onclick="pay()">จ่ายเงิน</button>
+        </div>
+
+        <!-- ===== SOUND ===== -->
+        <audio id="add-sound" src="sounds/heyy.mp3"></audio>
+        <audio id="pay-sound" src="sounds/caimangto.mp3"></audio>
+
+        <script src="app.js"></script>
+        <div class="news">
+        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.15752-9/616656596_4359860514283472_7387014865950172855_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=WUoiNbbzJMEQ7kNvwH1kACv&_nc_oc=AdksR26j2IL9GCo1V0WbUfVsg-tU24LVSNxTQx_hsGBq4dHRM-BN81he0N0UbrYtZ2EcyXVDub2x7ivT9rJ5y7bu&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fkkc3-1.fna&oh=03_Q7cD4QH0f5e4Fjrddx3WcWeI9ZH6QCs3rPhQBbeJlBm8JLxGFQ&oe=69943C92">
+    </div>
+        </body>
+        </html>
